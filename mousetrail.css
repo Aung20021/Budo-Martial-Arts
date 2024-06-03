@@ -1,0 +1,19 @@
+#mouse-trail {
+  background: radial-gradient(
+    circle at 10px 10px,
+    rgba(56, 180, 252, 0.836),
+    transparent
+  );
+  border-radius: 100%;
+  width: 12px; /* Increase size for a more fluffy appearance */
+  height: 12px; /* Increase size for a more fluffy appearance */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: 0 0 10px rgba(56, 180, 252, 0.5), 0 0 20px rgba(56, 180, 252, 0.4),
+    0 0 30px rgba(56, 180, 252, 0.3), 0 0 40px rgba(56, 180, 252, 0.2),
+    0 0 50px rgba(56, 180, 252, 0.1);
+}

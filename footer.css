@@ -1,0 +1,77 @@
+/* General styles for the footer */
+footer {
+  background-color: #f8f9fa; /* Light grey background */
+}
+
+footer h5 {
+  font-weight: bold;
+}
+
+footer .glyph-hover-effect {
+  transition: color 0.3s ease;
+}
+
+footer .glyph-hover-effect:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+footer .logo-img {
+  max-width: 100px; /* Adjust logo size */
+}
+
+footer .list-unstyled {
+  padding: 0;
+}
+
+footer .list-unstyled li {
+  margin-bottom: 10px;
+}
+
+footer .list-unstyled li a {
+  text-decoration: none;
+}
+
+footer .social-icons a {
+  color: #000;
+  font-size: 1.5rem;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.356);
+}
+
+@media (min-width: 992px) {
+  footer .logo-img {
+    max-width: 200px; /* Smaller logo size for small screens */
+  }
+}
+/* Responsive design adjustments */
+@media (max-width: 700px) {
+  footer .container {
+    padding: 2rem 1rem;
+  }
+
+  footer .row {
+    flex-direction: column;
+  }
+
+  footer .col-lg-6,
+  footer .col-lg-3 {
+    max-width: 100%;
+  }
+
+  footer .logo-img {
+    max-width: 80px; /* Smaller logo size for small screens */
+  }
+
+  footer .social-icons a {
+    font-size: 1.2rem;
+    margin-right: 10px;
+  }
+}

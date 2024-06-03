@@ -1,0 +1,10 @@
+.A {
+  background-image: url("/images/girl-practicing-martial-arts-3840x2160_46485-mm-90.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: sans-serif;
+  height: 400px;
+  width: 100%;
+  margin-top: 10%;
+}

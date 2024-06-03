@@ -1,0 +1,236 @@
+/* General styles */
+a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+
+a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: white; /* White underline */
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.nav {
+  background-color: rgba(0, 0, 0, 0.356);
+  padding: 1px 0;
+  color: rgb(207, 64, 64);
+  transition: background-color 0.3s, padding 0.3s, color 0.3s;
+}
+
+.nav.active {
+  background-color: black;
+  color: white;
+  padding: 10px 0;
+}
+
+.navbar-brand,
+.nav-link {
+  transition: color 0.3s;
+  color: black;
+}
+
+.nav.active {
+  color: white;
+}
+
+/* CSS for Glyph Effect */
+.glyph-hover-effect:hover span:not(.sr-only)::after {
+  -webkit-animation: flash calc(var(--speed, 0.25) * 1s)
+    calc(var(--index, 0) * 0.05s) steps(1, end);
+  animation: flash calc(var(--speed, 0.25) * 1s) calc(var(--index, 0) * 0.05s)
+    steps(1, end);
+}
+
+@-webkit-keyframes flash {
+  0%,
+  20% {
+    content: "_";
+  }
+  40% {
+    content: var(--char-1);
+  }
+  60% {
+    content: var(--char-2);
+  }
+  80% {
+    content: var(--char-3);
+  }
+}
+
+@keyframes flash {
+  0%,
+  20% {
+    content: "_";
+  }
+  40% {
+    content: var(--char-1);
+  }
+  60% {
+    content: var(--char-2);
+  }
+  80% {
+    content: var(--char-3);
+  }
+}
+
+.glyph-hover-effect span:not(.sr-only) {
+  position: relative;
+  color: transparent;
+}
+
+.glyph-hover-effect span:not(.sr-only)::after {
+  content: attr(data-char);
+  position: absolute;
+  display: inline-block;
+  inset: 0;
+  color: white;
+}
+
+/* Base styles for the navbar-toggler-icon */
+.navbar-toggler-logo {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+
+.navbar-toggler-logo span {
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 50%;
+  background: rgb(56, 56, 56);
+  opacity: 1;
+  transition: 0.25s ease-in-out;
+}
+
+/* Change background color to white when nav is active */
+.nav.active .navbar-toggler-logo span {
+  background: white;
+}
+
+.navbar-toggler-logo span:nth-child(even) {
+  left: 50%;
+  border-radius: 0 5px 5px 0;
+}
+
+.navbar-toggler-logo span:nth-child(odd) {
+  left: 0px;
+  border-radius: 5px 0 0 5px;
+}
+
+.navbar-toggler-logo span:nth-child(1),
+.navbar-toggler-logo span:nth-child(2) {
+  top: 0px;
+}
+
+.navbar-toggler-logo span:nth-child(3),
+.navbar-toggler-logo span:nth-child(4) {
+  top: 12px;
+}
+
+.navbar-toggler-logo span:nth-child(5),
+.navbar-toggler-logo span:nth-child(6) {
+  top: 24px;
+}
+
+.navbar-toggler.collapsed .navbar-toggler-logo span:nth-child(1),
+.navbar-toggler.collapsed .navbar-toggler-logo span:nth-child(6) {
+  transform: rotate(45deg);
+}
+
+.navbar-toggler.collapsed .navbar-toggler-logo span:nth-child(2),
+.navbar-toggler.collapsed .navbar-toggler-logo span:nth-child(5) {
+  transform: rotate(-45deg);
+}
+
+.navbar-toggler.collapsed .navbar-toggler-logo span:nth-child(1) {
+  left: 5px;
+  top: 10px;
+}
+
+.navbar-toggler.collapsed .navbar-toggler-logo span:nth-child(2) {
+  left: calc(50% - 5px);
+  top: 10px;
+}
+
+.navbar-toggler.collapsed .navbar-toggler-logo span:nth-child(3) {
+  left: -50%;
+  opacity: 0;
+}
+
+.navbar-toggler.collapsed .navbar-toggler-logo span:nth-child(4) {
+  left: 100%;
+  opacity: 0;
+}
+
+.navbar-toggler.collapsed .navbar-toggler-logo span:nth-child(5) {
+  left: 5px;
+  top: 20px;
+}
+
+.navbar-toggler.collapsed .navbar-toggler-logo span:nth-child(6) {
+  left: calc(50% - 5px);
+  top: 20px;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.box12 {
+  z-index: -99999;
+  width: 10px;
+  height: 1000px;
+  background-color: aqua;
+}
+
+body {
+  scrollbar-width: thin;
+  scrollbar-color: black black;
+}
+
+@media (max-width: 1200px) {
+  .sidebar {
+    background-color: rgba(225, 225, 225, 0.15);
+    backdrop-filter: blur(10px);
+    overflow-y: auto; /* Enable vertical scrollbar when content overflows */
+  }
+  .sidebar li,
+  .endbar {
+    margin-top: 20px;
+  }
+  .offcanvas-title {
+    margin-left: 150px;
+  }
+}

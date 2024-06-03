@@ -1,0 +1,25 @@
+.A {
+  background-image: url("/images/girl-practicing-martial-arts-3840x2160_46485-mm-90.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: sans-serif;
+  height: 400px;
+  width: 100%;
+  margin-top: 10%;
+}
+.mission-section {
+  background-color: #21222456;
+  padding: 2rem 0;
+}
+
+.profile img {
+  width: 100%;
+  height: auto;
+  max-width: 150px; /* Adjust as needed */
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
